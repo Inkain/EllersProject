@@ -1,0 +1,18 @@
+<resources>
+	<dimen name="marginb">24dp</dimen>
+	<dimen name="padding">480dp</dimen>
+	<dimen name="d1padding">230dp</dimen>
+	<dimen name="d2padding">42dp</dimen>
+	<dimen name="dp257">257dp</dimen>
+	<dimen name="dp105">105dp</dimen>
+	<dimen name="dp514">514dp</dimen>
+	<dimen name="dp172">172dp</dimen>
+	<dimen name="dp90">90dp</dimen>
+	<dimen name="dp85">85dp</dimen>
+	<dimen name="dp160">160dp</dimen>
+	<dimen name="dp127">127dp</dimen>
+	<dimen name="dp110">110dp</dimen>
+	<dimen name="dp250">250dp</dimen>
+	<dimen name="dp170">170dp</dimen>
+	<dimen name="dp40">40dp</dimen>
+</resources>

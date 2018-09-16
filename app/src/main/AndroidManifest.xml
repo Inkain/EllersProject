@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.inkant1990gmail.ellersproject">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".homeworks.homework1.Home1Activity" />
+        <activity android:name=".homeworks.homework2.Home2Activity" />
+        <activity android:name=".classwork.classwork2.Classwork2MainAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".classwork.classwork2.Classwork2SecondAct" />
+        <activity android:name=".homeworks.homework3.Home3MainActivity" />
+        <activity android:name=".homeworks.homework4.Home4MainActivity" />
+        <activity android:name=".homeworks.homework4.Home4SecondActivity" />
+        <activity android:name=".homeworks.homework4.Home4ThirdActivity" />
+        <activity android:name=".homeworks.homework5.Home5MainActivity" />
+        <activity android:name=".classwork.classwork2.ServiceMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".classwork.classwork2.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".classwork.classwork2.MyIntentService"
+            android:exported="false" />
+
+        <activity android:name=".classwork.classwork2.RecycleMainActivity"></activity>
+    </application>
+
+</manifest>

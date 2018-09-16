@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".homeworks.homework2.Home2Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:background="@color/back"
+        >
+
+        <LinearLayout
+            android:id="@+id/fIT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".35"
+                android:background="#14e73a"
+                android:paddingBottom="@dimen/padding" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".35"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fMa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fIT"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:id="@+id/m2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.50"
+                android:background="#f91008"
+                android:paddingBottom="@dimen/padding" />
+
+            <TextView
+                android:id="@+id/m1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.50"
+                android:background="#066423" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fPL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fMa"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".35"
+                android:background="#f91008"
+                android:paddingBottom="@dimen/padding"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".35"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".35"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fAus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fPL"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".50"
+                android:background="#ffffff"
+                android:paddingBottom="@dimen/padding" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".50"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fThai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fAus"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#f91008"
+                android:paddingBottom="@dimen/padding"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="#1018b3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/fCol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fThai"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".50"
+                android:background="#f9bd08"
+                android:paddingBottom="@dimen/padding"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".25"
+                android:background="#121de4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".25"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fDa1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fCol"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:background="#f91008"
+                android:paddingBottom="@dimen/d1padding" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".10"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".60"
+                android:background="#f91008" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fDas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fDa1"
+            android:background="#ffffff"
+            android:paddingBottom="@dimen/d2padding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fDas"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/marginb">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".30"
+                android:background="#f91008"
+                android:paddingBottom="@dimen/d1padding" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".10"
+                android:background="#ffffff" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".60"
+                android:background="#f91008" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
