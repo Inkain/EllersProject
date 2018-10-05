@@ -27,16 +27,16 @@ public class Home4SecondActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btHome4StartAnim: {
                 animation.start();
-                Toast.makeText(this,"start",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "start", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.btHome4StopAnim: {
                 animation.stop();
-                Toast.makeText(this,"stop",Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "stop", Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.btHome4toCircle: {
-                Intent intent =new Intent(this,Home4ThirdActivity.class);
+                Intent intent = new Intent(this, Home4ThirdActivity.class);
                 startActivity(intent);
                 break;
             }

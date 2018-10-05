@@ -41,4 +41,5 @@ public class Home1Activity extends Activity implements View.OnClickListener {
         tvBlue.setText(text);
 
     }
+
 }

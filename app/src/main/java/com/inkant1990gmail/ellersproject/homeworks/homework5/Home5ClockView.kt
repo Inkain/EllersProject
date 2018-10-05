@@ -103,6 +103,5 @@ class Home5ClockView : View {
         canvas.drawLine(xline, (height / 2).toFloat(), xline, height / 2 - radius / 1.6f, secondPaint)
         canvas.restore()
 
-
     }
 }

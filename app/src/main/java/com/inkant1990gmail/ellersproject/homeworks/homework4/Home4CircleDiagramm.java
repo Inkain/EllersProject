@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -23,10 +22,6 @@ public class Home4CircleDiagramm extends View {
 
     public Home4CircleDiagramm(Context context) {
         super(context);
-      /*  values=new float[values2.length];
-        values[0]=values2[0];
-        values[1]=values2[1];
-        values[2]=values2[2];*/
         init();
     }
 
@@ -48,11 +43,12 @@ public class Home4CircleDiagramm extends View {
         super(context, attrs);
         init();
     }
-    public void setValues(float[] values2){
-        values=new float[values2.length];
-        values[0]=values2[0];
-        values[1]=values2[1];
-        values[2]=values2[2];
+
+    public void setValues(float[] values2) {
+        values = new float[values2.length];
+        values[0] = values2[0];
+        values[1] = values2[1];
+        values[2] = values2[2];
         sum = values[0] + values[1] + values[2];
     }
 
@@ -72,18 +68,18 @@ public class Home4CircleDiagramm extends View {
     protected void onDraw(Canvas canvas) {
         String text;
         float start = 0f, temp, tempT1;
-        float startT = (((360.0f / sum) * values[0]) + ((360.0f / sum) * values[1]) + ((360.0f / sum) * values[2]))/1.3f , tempT = startT + ((360.0f / sum) * values[2])/2 ;
+        float startT = (((360.0f / sum) * values[0]) + ((360.0f / sum) * values[1]) + ((360.0f / sum) * values[2])) / 1.3f, tempT = startT + ((360.0f / sum) * values[2]) / 2;
 
         super.onDraw(canvas);
         for (int i = 0; i < values.length; i++) {
             paint.setColor(colors[i]);
             text = String.valueOf(values[i]);
             canvas.drawArc(rectf, start, temp = ((360.0f / sum) * values[i]), true, paint);
-            tempT1 = startT + ((360.0f / sum) * values[values.length - i - 1])/2 ;
+            tempT1 = startT + ((360.0f / sum) * values[values.length - i - 1]) / 2;
             if (tempT1 <= 150f) tempT = tempT1;
             Log.i("myLogs", tempT + "");
             canvas.drawText(text, startT, tempT, mTextPaint);
-            startT = startT - ((360.0f / sum) * values[values.length - i - 1])/1.3f;
+            startT = startT - ((360.0f / sum) * values[values.length - i - 1]) / 1.3f;
             start += temp;
         }
     }

@@ -17,4 +17,16 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="diagramma">diagramma</string>
+    <string name="home6">HOME6</string>
+    <string name="home5">HOME5</string>
+    <string name="home7">Home7</string>
+    <string name="firstname">First name</string>
+    <string name="surname">surname</string>
+    <string name="age">age</string>
+    <string name="isdegree">isDegree</string>
+    <string name="photografy_address">photo url</string>
+    <string name="save_data">Save data</string>
+    <string name="filter">Add student</string>
+    <string name="id">ID</string>
+    <string name="filter1">filter</string>
 </resources>

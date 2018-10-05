@@ -8,8 +8,7 @@ import android.graphics.Shader;
 
 import com.squareup.picasso.Transformation;
 
-public class Home3CircleTransform implements Transformation
-{
+public class Home3CircleTransform implements Transformation {
     public Home3CircleTransform() {
     }
 
@@ -21,7 +20,7 @@ public class Home3CircleTransform implements Transformation
 
         final Bitmap output = Bitmap.createBitmap(source.getWidth(), source.getHeight(), Bitmap.Config.ARGB_8888);
         final Canvas canvas = new Canvas(output);
-        canvas.drawCircle(source.getWidth()/2 , source.getHeight()/2 , source.getHeight()<source.getWidth()?source.getHeight()/2.2f:source.getWidth()/2 , paint);
+        canvas.drawCircle(source.getWidth() / 2, source.getHeight() / 2, source.getHeight() < source.getWidth() ? source.getHeight() / 2.2f : source.getWidth() / 2, paint);
 
         if (source != output)
             source.recycle();
