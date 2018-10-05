@@ -38,7 +38,6 @@ class Home7MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {
                 val list = ArrayList<Home7Student>()
                 var filterQuery = editFilter.text.toString()
-                var data:StringBuilder
 
                 for (student in DataStudent.getInstance()!!.people) {
                     if (filterQuery.isNotEmpty()) student.visible = student.name.equals(filterQuery) || student.surname.equals(filterQuery)
