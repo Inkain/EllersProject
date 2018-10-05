@@ -20,12 +20,14 @@ class Home7MainActivity : AppCompatActivity() {
     private val studentAdapter: Home7StudentListAdapter = Home7StudentListAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        JsonLoader.execute()
-        JsonLoader.get()
-
         setContentView(activity_home7_main)
         studentRecyclerView = findViewById(R.id.rvHome7Students)
         editFilter = findViewById(R.id.etHome7filter)
+        if (DataStudent.getInstance() == null) {
+            JsonLoader.execute()
+            JsonLoader.get()
+        }
+        studentAdapter.studentList = DataStudent.getInstance()!!.people
         editFilter.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
 
@@ -38,7 +40,6 @@ class Home7MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable) {
                 val list = ArrayList<Home7Student>()
                 var filterQuery = editFilter.text.toString()
-                var data:StringBuilder
 
                 for (student in DataStudent.getInstance()!!.people) {
                     if (filterQuery.isNotEmpty()) student.visible = student.name.equals(filterQuery) || student.surname.equals(filterQuery)
@@ -51,7 +52,7 @@ class Home7MainActivity : AppCompatActivity() {
         studentRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         studentRecyclerView.adapter = studentAdapter
         studentRecyclerView.setHasFixedSize(true)
-        studentAdapter.studentList = DataStudent.getInstance()!!.people
+
 
     }
 
@@ -61,10 +62,6 @@ class Home7MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onPause() {
-        super.onPause()
-        JsonLoader.cancel(true)
-    }
 
     fun addStudent(view: View) {
         var intent: Intent = Intent(this, Home7EditActivity::class.java)

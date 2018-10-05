@@ -10,10 +10,14 @@ import java.net.URL
 
 
 object JsonLoader : AsyncTask<String, Int, Unit>() {
+    override fun onCancelled(result: Unit?) {
+        super.onCancelled(result)
+    }
 
     override fun onPostExecute(result: Unit?) {
         super.onPostExecute(result)
         cancel(true)
+
     }
 
     override fun doInBackground(vararg params: String?) {
@@ -39,6 +43,7 @@ object JsonLoader : AsyncTask<String, Int, Unit>() {
 
         } finally {
             urlConnection.disconnect()
+
         }
     }
 
