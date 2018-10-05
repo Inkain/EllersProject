@@ -12,6 +12,12 @@ import com.inkant1990gmail.ellersproject.homeworks.homework2.Home2Activity;
 import com.inkant1990gmail.ellersproject.homeworks.homework3.Home3MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework4.Home4MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework5.Home5MainActivity;
+import com.inkant1990gmail.ellersproject.homeworks.homework6.Home6MainActivity;
+import com.inkant1990gmail.ellersproject.homeworks.homework7.Home7MainActivity;
+import com.inkant1990gmail.ellersproject.homeworks.homework7.Home7Student;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StartActivity extends Activity {
 
@@ -50,6 +56,18 @@ public class StartActivity extends Activity {
                 startActivity(intent);
                 break;
             }
+            case R.id.home6: {
+                Intent intent = new Intent(this, Home6MainActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.home7: {
+                Intent intent = new Intent(this, Home7MainActivity.class);
+                startActivity(intent);
+                break;
+
+            }
+
         }
 
     }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.widget.ProgressBar
 import com.inkant1990gmail.ellersproject.R
 
@@ -23,13 +24,17 @@ class RecycleMainActivity : AppCompatActivity() {
                 Students("erhhrerhe","erhhrerhe"),
                 Students("erhhrerhe","erhhrerhe"),
                 Students("erhhrerhe","erhhrerhe")
-
-
-
-
         )
 
     adapter.listData=listData
+
+    }
+
+
+    interface onItemClick{
+        fun onClick(student:Students){
+            Log.v("myLogs",student.name)
+        }
 
     }
 }

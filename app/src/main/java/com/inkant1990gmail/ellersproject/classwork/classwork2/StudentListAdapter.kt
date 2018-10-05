@@ -13,7 +13,7 @@ class StudentListAdapter : RecyclerView.Adapter<StudentListAdapter.Holder>() {
         field=value
         notifyDataSetChanged()
     }
-
+   var onItemClick:RecycleMainActivity.onItemClick?=null
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): Holder {
         var view = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_recucle, viewGroup, false)
@@ -32,6 +32,12 @@ class StudentListAdapter : RecyclerView.Adapter<StudentListAdapter.Holder>() {
         val students = listData[p1]
         p0.nameTextView.setText(students.name)
         p0.surNameTextView.setText(students.surname)
+        p0.itemView.setOnClickListener{
+           onItemClick?.onClick(students)
+
+        }
+
+
     }
 
 
@@ -46,4 +52,5 @@ class StudentListAdapter : RecyclerView.Adapter<StudentListAdapter.Holder>() {
         }
 
     }
+
 }

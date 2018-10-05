@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.inkant1990gmail.ellersproject">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
@@ -13,7 +15,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,26 +26,14 @@
         </activity>
         <activity android:name=".homeworks.homework1.Home1Activity" />
         <activity android:name=".homeworks.homework2.Home2Activity" />
-        <activity android:name=".classwork.classwork2.Classwork2MainAct">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".classwork.classwork2.Classwork2MainAct" />
         <activity android:name=".classwork.classwork2.Classwork2SecondAct" />
         <activity android:name=".homeworks.homework3.Home3MainActivity" />
         <activity android:name=".homeworks.homework4.Home4MainActivity" />
         <activity android:name=".homeworks.homework4.Home4SecondActivity" />
         <activity android:name=".homeworks.homework4.Home4ThirdActivity" />
         <activity android:name=".homeworks.homework5.Home5MainActivity" />
-        <activity android:name=".classwork.classwork2.ServiceMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".classwork.classwork2.ServiceMainActivity" />
 
         <service
             android:name=".classwork.classwork2.MyService"
@@ -52,7 +43,28 @@
             android:name=".classwork.classwork2.MyIntentService"
             android:exported="false" />
 
-        <activity android:name=".classwork.classwork2.RecycleMainActivity"></activity>
+        <activity android:name=".classwork.classwork2.RecycleMainActivity" />
+        <activity android:name=".homeworks.homework6.Home6MainActivity" />
+
+        <service
+            android:name=".homeworks.homework6.Home6Service"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".homeworks.homework7.Home7MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".homeworks.homework7.Home7EditActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".classwork.classwork2.SharedPreferenceMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".classwork.classwork2.FragmentMainActivity"></activity>
     </application>
 
 </manifest>

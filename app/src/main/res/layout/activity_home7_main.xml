@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".homeworks.homework7.Home7MainActivity">
+
+    <EditText
+        android:id="@+id/etHome7filter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/Home7text"
+        android:hint="@string/filter1"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".7" />
+
+    <Button
+        style="@style/Home7text"
+        android:id="@+id/btHome7Filter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="addStudent"
+        android:text="@string/filter"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".3" />
+
+    <android.support.v7.widget.RecyclerView
+        style="@style/Home7text"
+        android:id="@+id/rvHome7Students"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etHome7filter"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="1" />
+
+
+</android.support.constraint.ConstraintLayout>
