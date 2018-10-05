@@ -13,11 +13,7 @@ import com.inkant1990gmail.ellersproject.homeworks.homework3.Home3MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework4.Home4MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework5.Home5MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework6.Home6MainActivity;
-import com.inkant1990gmail.ellersproject.homeworks.homework7.Home7MainActivity;
-import com.inkant1990gmail.ellersproject.homeworks.homework7.Home7Student;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.inkant1990gmail.ellersproject.homeworks.homework7.MainActivity;
 
 public class StartActivity extends Activity {
 
@@ -25,7 +21,6 @@ public class StartActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start_activity);
-        Log.v("myLogs","start");
     }
 
 
@@ -62,7 +57,7 @@ public class StartActivity extends Activity {
                 break;
             }
             case R.id.home7: {
-                Intent intent = new Intent(this, Home7MainActivity.class);
+                Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
 

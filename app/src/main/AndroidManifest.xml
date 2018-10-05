@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".StartActivity">
             <intent-filter>
@@ -52,10 +53,10 @@
             android:exported="true" />
 
         <activity
-            android:name=".homeworks.homework7.Home7MainActivity"
+            android:name=".homeworks.homework7.MainActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".homeworks.homework7.Home7EditActivity"
+            android:name=".homeworks.homework7.EditActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".classwork.classwork2.SharedPreferenceMainActivity">
             <intent-filter>

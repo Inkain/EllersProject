@@ -19,5 +19,5 @@ class DataStudent {
     lateinit var name: String
     var gender: Int = 0
     lateinit var date: Date
-    var people: java.util.ArrayList<Home7Student> = ArrayList<Home7Student>()
+    var people: java.util.ArrayList<Student> = ArrayList<Student>()
 }
