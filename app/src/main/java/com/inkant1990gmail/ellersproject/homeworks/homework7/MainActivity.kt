@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         val bundle: Bundle = Bundle()
         bundle.putBoolean("mTwoPane", mTwoPane)
         fragment.arguments = bundle
-        this.supportFragmentManager.beginTransaction().replace(R.id.hm7MainContainer, fragment).commit()
+        this.supportFragmentManager.beginTransaction().replace(R.id.hm7MainContainer, fragment).addToBackStack(null).commit()
+
 
     }
 
@@ -39,8 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-       // mTwoPane = checkLand()
-        //if (!mTwoPane)supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
+        if (!mTwoPane)supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
     }
 }
 
