@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         fragment.arguments = bundle
         this.supportFragmentManager.beginTransaction().replace(R.id.hm7MainContainer, fragment).commit()
 
+
     }
 
     fun checkLand(): Boolean = findViewById<View>(R.id.hm7studentDetailConteiner) != null
@@ -39,8 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-       // mTwoPane = checkLand()
-        //if (!mTwoPane)supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
+     //   if (findViewById<View>(R.id.hm7studentDetailConteiner) == null)supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
     }
 }
 
