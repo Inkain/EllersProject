@@ -35,4 +35,5 @@ class MainFragment : Fragment() {
         if (arguments!!.getBoolean("mTwoPane"))studentAdapter.notifyDataSetChanged()
         return view
     }
+
 }

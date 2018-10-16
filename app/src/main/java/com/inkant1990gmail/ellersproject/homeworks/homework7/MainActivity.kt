@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         bundle.putBoolean("mTwoPane", mTwoPane)
         fragment.arguments = bundle
         this.supportFragmentManager.beginTransaction().replace(R.id.hm7MainContainer, fragment).commit()
-
+        if (!mTwoPane&&supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!=null)this.supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
 
     }
 
@@ -38,9 +38,14 @@ class MainActivity : AppCompatActivity() {
         else this.supportFragmentManager.beginTransaction().replace(R.id.hm7MainContainer, fragment).commit()
     }
 
-    override fun onResume() {
-        super.onResume()
-     //   if (findViewById<View>(R.id.hm7studentDetailConteiner) == null)supportFragmentManager.beginTransaction().remove(supportFragmentManager.findFragmentById(R.id.hm7studentDetailConteiner)!!).commit()
+    override fun onBackPressed() {
+        val fm = supportFragmentManager
+
+        if (fm.backStackEntryCount > 0) {
+            fm.popBackStack()
+        } else {
+            finish()
+        }
     }
 }
 

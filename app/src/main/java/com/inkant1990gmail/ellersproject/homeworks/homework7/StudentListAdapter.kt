@@ -60,7 +60,7 @@ class StudentListAdapter(var mTwoPane: Boolean, var activity: MainFragment) : Re
             fragment.arguments = bundle
             if (mTwoPane) {
                 fragment.setArguments(bundle)
-                activity.fragmentManager!!.beginTransaction().replace(R.id.hm7studentDetailConteiner, fragment).commit()
+                activity.fragmentManager!!.beginTransaction().replace(R.id.hm7studentDetailConteiner, fragment).addToBackStack(null).commit()
             } else {
                 fragment.setArguments(bundle)
                 activity.fragmentManager!!.beginTransaction().replace(R.id.hm7MainContainer, fragment).commit()
