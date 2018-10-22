@@ -14,6 +14,8 @@ import com.inkant1990gmail.ellersproject.homeworks.homework4.Home4MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework5.Home5MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework6.Home6MainActivity;
 import com.inkant1990gmail.ellersproject.homeworks.homework7.MainActivity;
+import com.inkant1990gmail.ellersproject.homeworks.homework8.presentation.screen.timer.TimerActivity;
+import com.inkant1990gmail.ellersproject.homeworks.homework9.presentation.screen.ProfileActivity;
 
 public class StartActivity extends Activity {
 
@@ -62,7 +64,19 @@ public class StartActivity extends Activity {
                 break;
 
             }
+            case R.id.home8: {
+                Intent intent = new Intent(this, TimerActivity.class);
+                startActivity(intent);
+                break;
 
+            }
+
+            case R.id.home9: {
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+                break;
+
+            }
         }
 
     }

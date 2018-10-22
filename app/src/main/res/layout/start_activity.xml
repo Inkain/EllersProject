@@ -60,6 +60,20 @@
             android:layout_weight="0.50"
             android:onClick="toHome"
             android:text="@string/home7" />
+        <Button
+            android:id="@+id/home8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:onClick="toHome"
+            android:text="@string/home8" />
+        <Button
+            android:id="@+id/home9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.50"
+            android:onClick="toHome"
+            android:text="@string/home9" />
 
     </LinearLayout>
 
